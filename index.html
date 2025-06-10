@@ -1,126 +1,244 @@
+# Generaremos el archivo HTML completo con diseño aesthetic pastel+oscuro, tabla de miembros, enlaces a fotos, test y más.
+html_content = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>KATSEYE - Aesthetic Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KATSEYE - Aesthetic Vibes</title>
   <style>
     body {
-      font-family: 'Courier New', monospace;
-      background: linear-gradient(to right, #1e1e2f, #3d3d5c);
-      color: #f3e6ff;
-      padding: 2rem;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #1f1f2e, #4b325c);
+      color: #fceaff;
+      padding: 30px;
     }
 
     h1, h2 {
       text-align: center;
-      color: #ffcaf0;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 4px #000;
     }
 
-    .member {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #ffd6f5;
-      border-radius: 16px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      max-width: 600px;
-      box-shadow: 0 0 12px rgba(255, 182, 255, 0.2);
+    h1 {
+      font-size: 3rem;
+      color: #f9b4ef;
     }
 
-    .member img {
-      width: 100%;
-      border-radius: 12px;
-      margin-top: 1rem;
+    h2 {
+      font-size: 2rem;
+      color: #dab7f2;
+      margin-top: 50px;
     }
 
-    .member a {
-      color: #ffd6f5;
+    table {
+      margin: 0 auto;
+      width: 90%;
+      max-width: 900px;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px #00000066;
+    }
+
+    th, td {
+      border: 1px solid #ffffff30;
+      padding: 12px 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #3b2f4e;
+      color: #fdd6f6;
+    }
+
+    td {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #fceaff;
+    }
+
+    a {
+      color: #ffc6f7;
       text-decoration: none;
-      margin-left: 1rem;
-      font-size: 0.9rem;
+      font-weight: bold;
     }
 
-    .videography, .socials {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 16px;
-      border: 1px solid #ffa6d6;
-    }
-
-    .videography ul, .socials ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .videography li, .socials li {
-      margin-bottom: 0.5rem;
-    }
-
-    .videography a, .socials a {
-      color: #ffe1f0;
+    a:hover {
       text-decoration: underline;
+    }
+
+    .choose-bias, .aesthetic-test, .videografia {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #ffc6f7;
+      border-radius: 16px;
+      padding: 1.5rem;
+      max-width: 700px;
+      margin: 3rem auto;
+      box-shadow: 0 0 10px #ffcdf0a0;
+      text-align: center;
+    }
+
+    .bias-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #dab7f2;
+      border: none;
+      border-radius: 8px;
+      color: #2e1f39;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    .bias-buttons button:hover {
+      background-color: #ffc8f0;
+    }
+
+    form select {
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background-color: #2f2f44;
+      color: #ffdef5;
+      border: 1px solid #ffd6f7;
     }
   </style>
 </head>
 <body>
-  <h1>KATSEYE - Members</h1>
+  <h1>KATSEYE</h1>
 
-  <div class="member">
-    <h2>Manon 🦌 <a href="https://pin.it/6zH1aAOez" target="_blank">[foto]</a></h2>
-    <p>Cumpleaños: 26 de junio de 2002</p>
-    <img src="https://i.pinimg.com/originals/7f/39/df/7f39dfc128b31ccf35863d156a5c3937.jpg" alt="Manon">
+  <h2>Miembros</h2>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Cumpleaños</th>
+      <th>Animal</th>
+      <th>Papel</th>
+    </tr>
+    <tr>
+      <td><a href="https://pin.it/6zH1aAOez" target="_blank">Manon</a></td>
+      <td>26 de junio de 2002</td>
+      <td>🦌</td>
+      <td>Vocalista principal</td>
+    </tr>
+    <tr>
+      <td><a href="https://es.pinterest.com/pin/70437490206127/" target="_blank">Lara</a></td>
+      <td>3 de noviembre de 2005</td>
+      <td>TIED</td>
+      <td>Bailarina principal</td>
+    </tr>
+    <tr>
+      <td><a href="https://es.pinterest.com/pin/38773246788090228/" target="_blank">Megan</a></td>
+      <td>10 de febrero de 2006</td>
+      <td>🐶</td>
+      <td>Rapera principal</td>
+    </tr>
+    <tr>
+      <td><a href="https://es.pinterest.com/search/pins/?q=Daniela%20katseye&rs=typed" target="_blank">Daniela</a></td>
+      <td>1 de julio de 2004</td>
+      <td>🦁</td>
+      <td>Líder, vocalista</td>
+    </tr>
+    <tr>
+      <td><a href="https://es.pinterest.com/pin/288371182412001648/" target="_blank">Sophia</a></td>
+      <td>31 de diciembre de 2002</td>
+      <td>☀️</td>
+      <td>Visual, vocalista</td>
+    </tr>
+    <tr>
+      <td><a href="https://es.pinterest.com/pin/55661745390656709/" target="_blank">YoonChae</a></td>
+      <td>6 de diciembre de 2007</td>
+      <td>🐱</td>
+      <td>Maknae, bailarina</td>
+    </tr>
+  </table>
+
+  <div class="choose-bias">
+    <h2>💖 Elige tu bias</h2>
+    <div class="bias-buttons">
+      <button onclick="chooseBias('Manon')">Manon</button>
+      <button onclick="chooseBias('Lara')">Lara</button>
+      <button onclick="chooseBias('Megan')">Megan</button>
+      <button onclick="chooseBias('Daniela')">Daniela</button>
+      <button onclick="chooseBias('Sophia')">Sophia</button>
+      <button onclick="chooseBias('YoonChae')">YoonChae</button>
+    </div>
+    <p id="bias-result"></p>
   </div>
 
-  <div class="member">
-    <h2>Lara 🎀 <a href="https://es.pinterest.com/pin/70437490206127/" target="_blank">[foto]</a></h2>
-    <p>Cumpleaños: 3 de noviembre de 2005</p>
-    <img src="https://i.pinimg.com/originals/48/92/92/48929209356dd450de6486dc6cfaf1c1.jpg" alt="Lara">
+  <div class="aesthetic-test">
+    <h2>🎨 Test Aesthetic</h2>
+    <form id="testForm">
+      <p>1. ¿Cuál es tu color favorito?</p>
+      <select name="color">
+        <option value="pastel">Pastel</option>
+        <option value="neon">Neón</option>
+        <option value="dark">Oscuro</option>
+      </select>
+
+      <p>2. ¿Qué prefieres hacer un sábado?</p>
+      <select name="activity">
+        <option value="leer">Leer con música lo-fi</option>
+        <option value="salir">Salir con amigxs</option>
+        <option value="dibujar">Dibujar o crear arte</option>
+      </select>
+
+      <p>3. Elige una frase:</p>
+      <select name="frase">
+        <option value="vibra">"Sigue tu vibra"</option>
+        <option value="brilla">"Brilla sin pedir permiso"</option>
+        <option value="sombra">"Hay belleza en la sombra"</option>
+      </select>
+      <br><br>
+      <button type="button" onclick="getResult()">Ver resultado</button>
+    </form>
+    <p id="aesthetic-result"></p>
   </div>
 
-  <div class="member">
-    <h2>Megan 🐶 <a href="https://es.pinterest.com/pin/38773246788090228/" target="_blank">[foto]</a></h2>
-    <p>Cumpleaños: 10 de febrero de 2006</p>
-    <img src="https://i.pinimg.com/originals/21/4f/21/214f21c586abc3e3347865472b06c78e.jpg" alt="Megan">
-  </div>
-
-  <div class="member">
-    <h2>Daniela 🦁 <a href="https://es.pinterest.com/search/pins/?q=Daniela%20katseye&rs=typed" target="_blank">[foto]</a></h2>
-    <p>Cumpleaños: 1 de julio de 2004</p>
-    <img src="https://i.pinimg.com/originals/b8/f3/80/b8f3806c99420d57d3db3f46d90fdbdf.jpg" alt="Daniela">
-  </div>
-
-  <div class="member">
-    <h2>Sophia ☀️ <a href="https://es.pinterest.com/pin/288371182412001648/" target="_blank">[foto]</a></h2>
-    <p>Cumpleaños: 31 de diciembre de 2002</p>
-    <img src="https://i.pinimg.com/originals/59/eb/32/59eb3265cf29935a3b0b37919dd62dd2.jpg" alt="Sophia">
-  </div>
-
-  <div class="member">
-    <h2>Yoonchae 🐱 <a href="https://es.pinterest.com/pin/55661745390656709/" target="_blank">[foto]</a></h2>
-    <p>Cumpleaños: 6 de diciembre de 2007</p>
-    <img src="https://i.pinimg.com/originals/e2/64/1f/e2641f6d4b728e0e14d9cf2df9eb4c0f.jpg" alt="Yoonchae">
-  </div>
-
-  <div class="videography">
-    <h2>Videografía 🎬</h2>
+  <div class="videografia">
+    <h2>🎬 Videografía</h2>
+    <p>Aquí puedes insertar los MVs con enlaces:</p>
     <ul>
-      <li><a href="#link1">[Nombre del MV]</a></li>
-      <li><a href="#link2">[Nombre del MV]</a></li>
-      <li><a href="#link3">[Nombre del MV]</a></li>
-      <!-- Agrega más según sea necesario -->
+      <li><strong>Queen</strong> – [Link MV aquí]</li>
+      <li><strong>Guess Who</strong> – [Link MV aquí]</li>
+      <li><strong>Starlight</strong> – [Link MV aquí]</li>
+      <li><strong>Gnarly</strong> – [Link MV aquí]</li>
     </ul>
   </div>
 
-  <div class="socials">
-    <h2>Redes Sociales 🌐</h2>
-    <ul>
-      <li><a href="#ig">Instagram Oficial</a></li>
-      <li><a href="#yt">YouTube Oficial</a></li>
-      <li><a href="#x">Twitter Oficial</a></li>
-      <li><a href="#tt">TikTok Oficial</a></li>
-    </ul>
-  </div>
+  <script>
+    function chooseBias(name) {
+      const messages = {
+        'Manon': '✨ Manon: Elegancia y energía tranquila.',
+        'Lara': '🌸 Lara: Dulce, fresca y con un flow especial.',
+        'Megan': '🐶 Megan: Tu bias vibra cute y energética.',
+        'Daniela': '🦁 Daniela: Fuerte, segura y con presencia.',
+        'Sophia': '☀️ Sophia: Brilla con calidez y estilo.',
+        'YoonChae': '🐱 YoonChae: Pequeña, ágil y magnética.'
+      };
+      document.getElementById('bias-result').textContent = messages[name];
+    }
+
+    function getResult() {
+      const form = document.getElementById('testForm');
+      const color = form.color.value;
+      const activity = form.activity.value;
+      const frase = form.frase.value;
+
+      let result = "";
+
+      if (color === "pastel" && activity === "leer") {
+        result = "Eres aesthetic soft 💕 – calmada y soñadora.";
+      } else if (color === "neon" && activity === "salir") {
+        result = "Eres aesthetic bold 🌈 – creativa y extrovertida.";
+      } else if (color === "dark" && frase === "sombra") {
+        result = "Eres aesthetic dark 🖤 – profunda y misteriosa.";
+      } else {
+        result = "Eres un mix aesthetic 🎭 – única y original.";
+      }
+
+      document.getElementById('aesthetic-result').textContent = result;
+    }
+  </script>
 </body>
 </html>
