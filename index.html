@@ -1,155 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KATSEYE - Estilo Aesthetic</title>
+  <meta charset="UTF-8">
+  <title>KATSEYE - Aesthetic Page</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #f9e4ff);
-      color: #fceeff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 40px 20px;
-      text-align: center;
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(to right, #1e1e2f, #3d3d5c);
+      color: #f3e6ff;
+      padding: 2rem;
+      line-height: 1.6;
     }
+
     h1, h2 {
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: #ffcaf0;
     }
-    h1 {
-      font-size: 3rem;
-      color: #ffc8dd;
-      margin-bottom: 40px;
+
+    .member {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #ffd6f5;
+      border-radius: 16px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 600px;
+      box-shadow: 0 0 12px rgba(255, 182, 255, 0.2);
     }
-    h2 {
-      font-size: 2rem;
-      color: #cdb4db;
-      margin: 60px 0 20px;
+
+    .member img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
     }
-    .members {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1000px;
-    }
-    .member-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid #ffffff30;
-      border-radius: 20px;
-      width: 200px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
-      transition: all 0.3s ease;
-    }
-    .member-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 30px rgba(255, 182, 193, 0.6);
-    }
-    .member-photo {
-      width: 100px;
-      height: 100px;
-      background: #fff;
-      border-radius: 50%;
-      margin: 0 auto 15px;
-      background-size: cover;
-      background-position: center;
-    }
-    .member-name a {
-      font-size: 1.1rem;
-      color: #ffe3ec;
-      font-weight: bold;
+
+    .member a {
+      color: #ffd6f5;
       text-decoration: none;
-    }
-    .member-name a:hover {
-      text-decoration: underline;
-    }
-    .member-birthday, .member-symbol {
+      margin-left: 1rem;
       font-size: 0.9rem;
-      color: #e0e0ff;
     }
-    .videos, .socials {
-      max-width: 900px;
-      text-align: left;
-      padding: 20px;
+
+    .videography, .socials {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 16px;
+      border: 1px solid #ffa6d6;
     }
-    .videos ul, .socials ul {
+
+    .videography ul, .socials ul {
       list-style: none;
       padding-left: 0;
     }
-    .videos li, .socials li {
-      margin: 10px 0;
+
+    .videography li, .socials li {
+      margin-bottom: 0.5rem;
     }
-    a {
-      color: #ffd6ff;
+
+    .videography a, .socials a {
+      color: #ffe1f0;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>KATSEYE</h1>
-  <div class="members">
-    <div class="member-card">
-      <div class="member-photo" style="background-image: url('https://i.pinimg.com/originals/fc/e2/03/fce203d91b5b476af3469fc4707e2e9c.jpg');"></div>
-      <div class="member-name"><a href="https://pin.it/6zH1aAOez" target="_blank">Manon</a></div>
-      <div class="member-symbol">🦌</div>
-      <div class="member-birthday">26 de junio de 2002</div>
-    </div>
-    <div class="member-card">
-      <div class="member-photo" style="background-image: url('https://i.pinimg.com/originals/39/ba/e4/39bae44b6aa91e4cf49050a5e44f8a46.jpg');"></div>
-      <div class="member-name"><a href="https://es.pinterest.com/pin/70437490206127/" target="_blank">Lara</a></div>
-      <div class="member-symbol">🎀</div>
-      <div class="member-birthday">3 de noviembre de 2005</div>
-    </div>
-    <div class="member-card">
-      <div class="member-photo" style="background-image: url('https://i.pinimg.com/originals/1b/af/e0/1bafe0122c76343fcdcfccf1b7f92f38.jpg');"></div>
-      <div class="member-name"><a href="https://es.pinterest.com/pin/38773246788090228/" target="_blank">Megan</a></div>
-      <div class="member-symbol">🐶</div>
-      <div class="member-birthday">10 de febrero de 2006</div>
-    </div>
-    <div class="member-card">
-      <div class="member-photo" style="background-image: url('https://i.pinimg.com/originals/cd/8d/fc/cd8dfc4f750e536c9b7508eb8d41c7a2.jpg');"></div>
-      <div class="member-name"><a href="https://es.pinterest.com/search/pins/?q=Daniela%20katseye&rs=typed" target="_blank">Daniela</a></div>
-      <div class="member-symbol">🦁</div>
-      <div class="member-birthday">1 de julio de 2004</div>
-    </div>
-    <div class="member-card">
-      <div class="member-photo" style="background-image: url('https://i.pinimg.com/originals/8a/31/7b/8a317be58bb95cc7b76b8a19d68bd1ff.jpg');"></div>
-      <div class="member-name"><a href="https://es.pinterest.com/pin/288371182412001648/" target="_blank">Sophia</a></div>
-      <div class="member-symbol">☀️</div>
-      <div class="member-birthday">31 de diciembre de 2002</div>
-    </div>
-    <div class="member-card">
-      <div class="member-photo" style="background-image: url('https://i.pinimg.com/originals/e3/56/9d/e3569db2c47b0eb1aa2761c369d5cdd6.jpg');"></div>
-      <div class="member-name"><a href="https://es.pinterest.com/pin/55661745390656709/" target="_blank">YoonChae</a></div>
-      <div class="member-symbol">🐱</div>
-      <div class="member-birthday">6 de diciembre de 2007</div>
-    </div>
+  <h1>KATSEYE - Members</h1>
+
+  <div class="member">
+    <h2>Manon 🦌 <a href="https://pin.it/6zH1aAOez" target="_blank">[foto]</a></h2>
+    <p>Cumpleaños: 26 de junio de 2002</p>
+    <img src="https://i.pinimg.com/originals/7f/39/df/7f39dfc128b31ccf35863d156a5c3937.jpg" alt="Manon">
   </div>
 
-  <h2>Videografía</h2>
-  <div class="videos">
+  <div class="member">
+    <h2>Lara 🎀 <a href="https://es.pinterest.com/pin/70437490206127/" target="_blank">[foto]</a></h2>
+    <p>Cumpleaños: 3 de noviembre de 2005</p>
+    <img src="https://i.pinimg.com/originals/48/92/92/48929209356dd450de6486dc6cfaf1c1.jpg" alt="Lara">
+  </div>
+
+  <div class="member">
+    <h2>Megan 🐶 <a href="https://es.pinterest.com/pin/38773246788090228/" target="_blank">[foto]</a></h2>
+    <p>Cumpleaños: 10 de febrero de 2006</p>
+    <img src="https://i.pinimg.com/originals/21/4f/21/214f21c586abc3e3347865472b06c78e.jpg" alt="Megan">
+  </div>
+
+  <div class="member">
+    <h2>Daniela 🦁 <a href="https://es.pinterest.com/search/pins/?q=Daniela%20katseye&rs=typed" target="_blank">[foto]</a></h2>
+    <p>Cumpleaños: 1 de julio de 2004</p>
+    <img src="https://i.pinimg.com/originals/b8/f3/80/b8f3806c99420d57d3db3f46d90fdbdf.jpg" alt="Daniela">
+  </div>
+
+  <div class="member">
+    <h2>Sophia ☀️ <a href="https://es.pinterest.com/pin/288371182412001648/" target="_blank">[foto]</a></h2>
+    <p>Cumpleaños: 31 de diciembre de 2002</p>
+    <img src="https://i.pinimg.com/originals/59/eb/32/59eb3265cf29935a3b0b37919dd62dd2.jpg" alt="Sophia">
+  </div>
+
+  <div class="member">
+    <h2>Yoonchae 🐱 <a href="https://es.pinterest.com/pin/55661745390656709/" target="_blank">[foto]</a></h2>
+    <p>Cumpleaños: 6 de diciembre de 2007</p>
+    <img src="https://i.pinimg.com/originals/e2/64/1f/e2641f6d4b728e0e14d9cf2df9eb4c0f.jpg" alt="Yoonchae">
+  </div>
+
+  <div class="videography">
+    <h2>Videografía 🎬</h2>
     <ul>
-      <li><a href="#">Queen - [Link a YouTube]</a></li>
-      <li><a href="#">Guess Who - [Link a YouTube]</a></li>
-      <li><a href="#">Starlight - [Link a YouTube]</a></li>
-      <li><a href="#">Gnarly - [Link a YouTube]</a></li>
+      <li><a href="#link1">[Nombre del MV]</a></li>
+      <li><a href="#link2">[Nombre del MV]</a></li>
+      <li><a href="#link3">[Nombre del MV]</a></li>
+      <!-- Agrega más según sea necesario -->
     </ul>
   </div>
 
-  <h2>Redes Sociales</h2>
   <div class="socials">
+    <h2>Redes Sociales 🌐</h2>
     <ul>
-      <li><a href="#">Instagram oficial</a></li>
-      <li><a href="#">TikTok</a></li>
-      <li><a href="#">YouTube</a></li>
-      <li><a href="#">Twitter/X</a></li>
+      <li><a href="#ig">Instagram Oficial</a></li>
+      <li><a href="#yt">YouTube Oficial</a></li>
+      <li><a href="#x">Twitter Oficial</a></li>
+      <li><a href="#tt">TikTok Oficial</a></li>
     </ul>
   </div>
 </body>
