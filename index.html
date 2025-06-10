@@ -1,229 +1,74 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KATSEYE - Pop Futurista</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #2e2b3a, #1f1c2e);
-      color: #d7c9f3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 40px;
-      font-weight: 900;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      color: #cdb4db;
-      text-shadow: 2px 2px 10px #b497bdaa;
-    }
-    h2 {
-      font-size: 2.2rem;
-      margin-top: 50px;
-      margin-bottom: 25px;
-      font-weight: 800;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #b497bd;
-      text-shadow: 1px 1px 5px #a88fb3cc;
-    }
-    .members {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 900px;
-      width: 100%;
-    }
-    .member-card {
-      background: rgba(205, 180, 219, 0.15);
-      border: 1px solid #a88fb3aa;
-      border-radius: 15px;
-      width: 180px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(180, 155, 210, 0.4);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      color: #e7daf8;
-    }
-    .member-card:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 30px rgba(180, 155, 210, 0.8);
-      background: rgba(205, 180, 219, 0.3);
-    }
-    .member-photo {
-      width: 100px;
-      height: 100px;
-      background: #d7c9f3;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 0 10px #b497bdcc;
-    }
-    .member-name {
-      font-size: 1.3rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 6px;
-      color: #e7daf8;
-    }
-    .member-birthday,
-    .member-role,
-    .member-animal {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #d7c9f3cc;
-      margin-bottom: 4px;
-    }
-    .animal-emoji {
-      font-size: 1.2rem;
-      margin-left: 6px;
-    }
-    .section-container {
-      max-width: 900px;
-      width: 100%;
-      background: rgba(112, 97, 134, 0.3);
-      border-radius: 15px;
-      padding: 30px 40px;
-      box-shadow: 0 4px 25px rgba(180, 155, 210, 0.6);
-      margin-top: 40px;
-      text-align: left;
-      color: #d7c9f3;
-    }
-    .song-item, .social-item {
-      margin-bottom: 20px;
-    }
-    .song-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #cdb4db;
-      margin-bottom: 6px;
-      letter-spacing: 1px;
-    }
-    .song-info {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    .social-link {
-      color: #b497bd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .social-link:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-      .member-card {
-        width: 140px;
-        padding: 15px;
-      }
-      h1 {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>KATSEYE</h1>
-  
-  <div class="members">
-    <div class="member-card" title="Manon - Vocalista Principal">
-      <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/manon_20230205_164403.png');"></div>
-      <div class="member-name">Manon</div>
-      <div class="member-birthday">13 de noviembre de 2004</div>
-      <div class="member-role">Vocalista Principal</div>
-      <div class="member-animal">Ciervo <span class="animal-emoji">🦌</span></div>
-    </div>
-    <div class="member-card" title="Lara - Subvocalista">
-      <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/lara_20230205_164437.png');"></div>
-      <div class="member-name">Lara</div>
-      <div class="member-birthday">21 de enero de 2006</div>
-      <div class="member-role">Subvocalista</div>
-      <div class="member-animal">Cobra <span class="animal-emoji">🐍</span></div>
-    </div>
-    <div class="member-card" title="Megan - Bailarina Principal">
-      <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/megan_20230205_164502.png');"></div>
-      <div class="member-name">Megan</div>
-      <div class="member-birthday">6 de septiembre de 2007</div>
-      <div class="member-role">Bailarina Principal</div>
-      <div class="member-animal">Panda Rojo <span class="animal-emoji">🦝</span></div>
-    </div>
-    <div class="member-card" title="Daniela - Subvocalista">
-      <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/daniela_20230205_164528.png');"></div>
-      <div class="member-name">Daniela</div>
-      <div class="member-birthday">15 de diciembre de 2007</div>
-      <div class="member-role">Subvocalista</div>
-      <div class="member-animal">León <span class="animal-emoji">🦁</span></div>
-    </div>
-    <div class="member-card" title="Sophia - Líder">
-      <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/sophia_20230205_164551.png');"></div>
-      <div class="member-name">Sophia</div>
-      <div class="member-birthday">28 de noviembre de 2007</div>
-      <div class="member-role">Líder</div>
-      <div class="member-animal">Grulla <span class="animal-emoji">🦢</span></div>
-    </div>
-    <div class="member-card" title="YoonChae - Bailarina Principal">
-      <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/yoonchae_20230205_164616.png');"></div>
-      <div class="member-name">YoonChae</div>
-      <div class="member-birthday">23 de abril de 2005</div>
-      <div class="member-role">Bailarina Principal</div>
-      <div class="member-animal">Conejito Blanco <span class="animal-emoji">🐰</span></div>
-    </div>
+<!-- ACTUALIZADO: miembros con nuevos animales -->
+<div class="members">
+  <div class="member-card" title="Manon - Vocalista Principal">
+    <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/manon_20230205_164403.png');"></div>
+    <a class="member-name" href="https://www.pinterest.com/search/pins/?q=manon%20katseye" target="_blank" rel="noopener noreferrer">Manon</a>
+    <div class="member-birthday">26 de junio de 2002</div>
+    <div class="member-role">Vocalista Principal</div>
+    <div class="member-animal">Ciervo <span class="animal-emoji">🦌</span></div>
   </div>
+  <div class="member-card" title="Lara - Subvocalista">
+    <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/lara_20230205_164437.png');"></div>
+    <a class="member-name" href="https://www.pinterest.com/search/pins/?q=lara%20katseye" target="_blank" rel="noopener noreferrer">Lara</a>
+    <div class="member-birthday">3 de noviembre de 2005</div>
+    <div class="member-role">Subvocalista</div>
+    <div class="member-animal">Tied <span class="animal-emoji">❓</span></div>
+  </div>
+  <div class="member-card" title="Megan - Bailarina Principal">
+    <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/megan_20230205_164502.png');"></div>
+    <a class="member-name" href="https://www.pinterest.com/search/pins/?q=megan%20katseye" target="_blank" rel="noopener noreferrer">Megan</a>
+    <div class="member-birthday">10 de febrero de 2006</div>
+    <div class="member-role">Bailarina Principal</div>
+    <div class="member-animal">Perro <span class="animal-emoji">🐶</span></div>
+  </div>
+  <div class="member-card" title="Daniela - Subvocalista">
+    <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/daniela_20230205_164528.png');"></div>
+    <a class="member-name" href="https://www.pinterest.com/search/pins/?q=daniela%20katseye" target="_blank" rel="noopener noreferrer">Daniela</a>
+    <div class="member-birthday">1 de julio de 2004</div>
+    <div class="member-role">Subvocalista</div>
+    <div class="member-animal">Leona <span class="animal-emoji">🦁</span></div>
+  </div>
+  <div class="member-card" title="Sophia - Líder">
+    <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/sophia_20230205_164551.png');"></div>
+    <a class="member-name" href="https://www.pinterest.com/search/pins/?q=sophia%20katseye" target="_blank" rel="noopener noreferrer">Sophia</a>
+    <div class="member-birthday">31 de diciembre de 2002</div>
+    <div class="member-role">Líder</div>
+    <div class="member-animal">Sol <span class="animal-emoji">☀️</span></div>
+  </div>
+  <div class="member-card" title="YoonChae - Bailarina Principal">
+    <div class="member-photo" style="background-image: url('https://static.kprofiles.com/profile_images/yoonchae_20230205_164616.png');"></div>
+    <a class="member-name" href="https://www.pinterest.com/search/pins/?q=yoonchae%20katseye" target="_blank" rel="noopener noreferrer">YoonChae</a>
+    <div class="member-birthday">6 de diciembre de 2007</div>
+    <div class="member-role">Bailarina Principal</div>
+    <div class="member-animal">Gato <span class="animal-emoji">🐱</span></div>
+  </div>
+</div>
 
-  <h2>Canciones Recomendadas</h2>
-  <div class="section-container">
-    <div class="song-item">
-      <div class="song-title">Queen</div>
-      <div class="song-info">Canción debut de KATSEYE lanzada en octubre de 2023. Un tema pop vibrante que empodera desde la primera nota.</div>
-    </div>
-    <div class="song-item">
-      <div class="song-title">Guess Who</div>
-      <div class="song-info">Pop + funk, lanzado en noviembre de 2023. Misterio, flow y un aura imposible de ignorar.</div>
-    </div>
-    <div class="song-item">
-      <div class="song-title">Starlight</div>
-      <div class="song-info">Canción luminosa con toques electrónicos. Esperanza en forma de melodía.</div>
-    </div>
-    <div class="song-item">
-      <div class="song-title">Gnarly</div>
-      <div class="song-info">Energía audaz y vibra callejera. Pop fresco y sin reglas. Puro KATSEYE style.</div>
-    </div>
-    <div class="song-item">
-      <div class="song-title">Flame</div>
-      <div class="song-info">Tema principal de la serie animada de Netflix <i>Jentry Chau vs. The Underworld</i>.</div>
-    </div>
-    <div class="song-item">
-      <div class="song-title">Beautiful Chaos</div>
-      <div class="song-info">Próximo EP que se lanzará el 27 de junio de 2025.</div>
+<!-- NUEVA SECCIÓN: VIDEOGRAFÍA -->
+<h2>Videografía</h2>
+<div class="section-container">
+  <div class="song-item">
+    <div class="song-title">Queen (Official MV)</div>
+    <div class="song-info">
+      <a href="[AGREGA_URL_AQUI]" target="_blank" rel="noopener noreferrer" class="social-link">Ver video</a>
     </div>
   </div>
-
-  <h2>Redes Sociales Oficiales</h2>
-  <div class="section-container">
-    <div class="social-item"><a href="https://katseye.world" target="_blank" class="social-link">🌐 Sitio web oficial</a></div>
-    <div class="social-item"><a href="https://www.instagram.com/katseyeworld/" target="_blank" class="social-link">📸 Instagram</a></div>
-    <div class="social-item"><a href="https://x.com/katseyeworld" target="_blank" class="social-link">🐦 Twitter (X)</a></div>
-    <div class="social-item"><a href="https://www.tiktok.com/@katseyeworld" target="_blank" class="social-link">🎵 TikTok</a></div>
-    <div class="social-item"><a href="https://www.youtube.com/@katseyeworld" target="_blank" class="social-link">▶️ YouTube</a></div>
+  <div class="song-item">
+    <div class="song-title">Guess Who (Performance ver.)</div>
+    <div class="song-info">
+      <a href="[AGREGA_URL_AQUI]" target="_blank" rel="noopener noreferrer" class="social-link">Ver video</a>
+    </div>
   </div>
-</body>
-</html>
+  <div class="song-item">
+    <div class="song-title">Starlight (Visual Film)</div>
+    <div class="song-info">
+      <a href="[AGREGA_URL_AQUI]" target="_blank" rel="noopener noreferrer" class="social-link">Ver video</a>
+    </div>
+  </div>
+  <div class="song-item">
+    <div class="song-title">Behind The Scenes - Debut Stage</div>
+    <div class="song-info">
+      <a href="[AGREGA_URL_AQUI]" target="_blank" rel="noopener noreferrer" class="social-link">Ver video</a>
+    </div>
+  </div>
+</div>
